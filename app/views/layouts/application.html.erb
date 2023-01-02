@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coinoid</title>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+    <script> $(function() { $('textarea').froalaEditor({
+      height: 200
+    })
+ }); </script>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <%= render "/layouts/nav" %>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <div class="footer"><p>Coinoid © 2017 | <a href="#">Privacy</a> | <a href="#">Advertise</a> | <a href="#">Help</a> | <a href="#">Feedback</a></p></div>
+  </body>
+</html>
